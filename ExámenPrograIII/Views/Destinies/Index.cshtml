@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ExámenPrograIII.Destinies>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Destinies</h2>
+
+
+<button class="btn btn-dark btn-md">@Html.ActionLink("Create New", "Create")</button>
+
+<br/>
+<br />
+<br />
+@foreach (var item in Model)
+{
+    <div class="container">
+        <div class="row">
+
+            <div id="elementCard" class="card">
+                <h5 id="" class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                <img src="@Html.DisplayFor(modelItem => item.Photo)" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Description: @Html.DisplayFor(modelItem => item.Description)</p>
+                    <p class="card-text">Price: $@Html.DisplayFor(modelItem => item.Price)</p>
+                    <button  class="btn btn-dark btn-md">@Html.ActionLink("Edit", "Edit", new { id = item.DestinyID })</button>
+                    <button  class="btn btn-danger btn-md">@Html.ActionLink("Delete", "Delete", new { id = item.DestinyID })</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

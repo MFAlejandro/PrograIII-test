@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntityFrameworkModelStoreContainer" CdmEntityContainer="DestiniesEntities">
+    <EntitySetMapping Name="Destinies">
+      <EntityTypeMapping TypeName="EntityFrameworkModel.Destinies">
+        <MappingFragment StoreEntitySet="Destinies">
+          <ScalarProperty Name="DestinyID" ColumnName="DestinyID" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
